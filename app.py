@@ -10,11 +10,11 @@ link_type = 'https://www.daraz.pk/products/u1-handfree-high-bass-good-quality-go
 if ("daraz" or "DARAZ") in link_type :
 	#daraz link
 	chrome_options = webdriver.ChromeOptions()
-  chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-  chrome_options.add_argument("--headless")
-  chrome_options.add_argument("--disable-dev-shm-usage")
-  chrome_options.add_argument("--no-sandbox")
-  driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+	chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+  	chrome_options.add_argument("--headless")
+  	chrome_options.add_argument("--disable-dev-shm-usage")
+  	chrome_options.add_argument("--no-sandbox")
+  	driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 	driver.get(link_type)
 	price = driver.find_elements_by_class_name("pdp-price")[0]
 	price_int = float(price.text[4:])
@@ -28,14 +28,13 @@ if ("daraz" or "DARAZ") in link_type :
 if ("amazon" or "AMAZON") in link_type :
 	#daraz link
 	chrome_options = webdriver.ChromeOptions()
-  chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-  chrome_options.add_argument("--headless")
-  chrome_options.add_argument("--disable-dev-shm-usage")
-  chrome_options.add_argument("--no-sandbox")
-  driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+  	chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+  	chrome_options.add_argument("--headless")
+  	chrome_options.add_argument("--disable-dev-shm-usage")
+  	chrome_options.add_argument("--no-sandbox")
+  	driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 	driver.get(link_type)
 	price = driver.find_element_by_id("priceblock_ourprice")
 	price_int = float(price.text[1:])
-	send_email(price_int,link_type)
 
 	
