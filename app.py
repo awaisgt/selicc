@@ -14,7 +14,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
-while(true):
+while(True):
 	if ("daraz" or "DARAZ") in link_type :
 		driver.get(link_type)
 		price = driver.find_elements_by_class_name("pdp-price")[0]
