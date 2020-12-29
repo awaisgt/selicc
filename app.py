@@ -24,7 +24,16 @@ while(True):
 		message =str(price_int)
 		s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 		s.quit()
-		time.sleep(900)
+		print("ok")
+		time.sleep(50)
+		print("ok")
+		time.sleep(50)
+		print("ok")
+		time.sleep(50)
+		print("ok")
+		time.sleep(50)
+		print("ok")
+		time.sleep(50)
 
 if ("amazon" or "AMAZON") in link_type :
 	driver.get(link_type)
