@@ -5,9 +5,11 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 
-link_type = 'https://www.daraz.pk/products/u1-handfree-high-bass-good-quality-good-sound-i128273142-s1287257140.html?spm=a2a0e.home.flashSale.3.35e349379B5Wi4&search=1&mp=1&c=fs'
+link_type = 'https://www.daraz.pk/products/buy-1-get-1-free-blutooth-handfree-wireless-bluetooth-headset-good-quality-bluetooth-handsfree-earphone-i143850138-s1305074376.html?spm=a2a0e.home.flashSale.4.35e34937DPyUTh&search=1&mp=1&c=fs'
 
-
+s = smtplib.SMTP('smtp.gmail.com', 587)
+s.starttls()
+s.login("awaisghbh@gmail.com", "pakarmy123")
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument("--headless")
@@ -19,9 +21,6 @@ while(True):
 		driver.get(link_type)
 		price = driver.find_elements_by_class_name("pdp-price")[0]
 		price_int = float(price.text[4:])
-		s = smtplib.SMTP('smtp.gmail.com', 587)
-		s.starttls()
-		s.login("awaisghbh@gmail.com", "pakarmy123")
 		message =str(price_int)
 		s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 		s.quit()
