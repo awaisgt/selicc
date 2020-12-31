@@ -9,7 +9,7 @@ link_type = 'https://www.daraz.pk/products/buy-1-get-1-free-blutooth-handfree-wi
 
 s = smtplib.SMTP('smtp.gmail.com', 587)
 s.starttls()
-s.login("awaisghbh@gmail.com", "pakarmy123")
+s.login("awaisghbh@gmail.com", os.environ.get("PASSWORD_HIDDEN"))
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument("--headless")
