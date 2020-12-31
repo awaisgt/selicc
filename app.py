@@ -21,7 +21,7 @@ def send_email():
 		<html>
  		 <head></head>
   			<body>
-    				HELLO WORLD 123
+    				<p style = "color:red">HELLO WORLD 123</p>
   					</body>
 							</html>
 								"""
