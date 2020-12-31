@@ -20,7 +20,7 @@ def send_email(price):
 	html = f"""\
 		<html>
  		 <head></head>
-  			<body>
+  			<body style = "background-color:"blue">
     				<p style = "color:red" align="center">{price}</p>
   					</body>
 							</html>
