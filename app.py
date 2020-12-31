@@ -14,7 +14,7 @@ def send_email(price):
 	recipients = ['awaisghaffar77@gmail.com'] 
 	emaillist = [elem.strip().split(',') for elem in recipients]
 	msg = MIMEMultipart()
-	msg['Subject'] = "anything" 
+	msg['Subject'] = "pppppppppp" 
 	msg['From'] = "anything"
 
 	html = f"""\
