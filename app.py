@@ -4,7 +4,7 @@ import os
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
-def send_email():
+def send_email(price):
 	from email.mime.text import MIMEText
 	from email.mime.application import MIMEApplication
 	from email.mime.multipart import MIMEMultipart
@@ -17,11 +17,11 @@ def send_email():
 	msg['Subject'] = "anything" 
 	msg['From'] = "anything"
 
-	html = """\
+	html = f"""\
 		<html>
  		 <head></head>
   			<body>
-    				<p style = "color:red" align="center">HELLO WORLD 123</p>
+    				<p style = "color:red" align="center">{price}</p>
   					</body>
 							</html>
 								"""
@@ -39,7 +39,6 @@ def send_email():
 	
 	
 
-
 #s = smtplib.SMTP('smtp.gmail.com', 587)
 #s.starttls()
 #s.login("awaisghbh@gmail.com", os.environ.get("PASSWORD_HIDDEN"))
@@ -56,7 +55,7 @@ while(True):
 	price = driver.find_elements_by_class_name("pdp-price")[0]
 	price_int = float(price.text[4:])
 	message =str(price_int)
-	send_email()
+	send_email(price_int)
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
