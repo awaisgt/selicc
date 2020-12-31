@@ -24,7 +24,7 @@ def send_email():
     				HELLO WORLD 123
   					</body>
 							</html>
-								""".format(df.to_html())
+								"""
 
 	part1 = MIMEText(html, 'html')
 	msg.attach(part1)
