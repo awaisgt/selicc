@@ -5,7 +5,6 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 
-link_type = 'https://www.daraz.pk/products/buy-1-get-1-free-blutooth-handfree-wireless-bluetooth-headset-good-quality-bluetooth-handsfree-earphone-i143850138-s1305074376.html?spm=a2a0e.home.flashSale.4.35e34937DPyUTh&search=1&mp=1&c=fs'
 
 s = smtplib.SMTP('smtp.gmail.com', 587)
 s.starttls()
@@ -17,25 +16,21 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 while(True):
-	if ("daraz" or "DARAZ") in link_type :
-		driver.get(link_type)
-		price = driver.find_elements_by_class_name("pdp-price")[0]
-		price_int = float(price.text[4:])
-		message =str(price_int)
-		s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
-		s.quit()
-		print("ok")
-		time.sleep(20)
-		print("ok")
-		time.sleep(20)
-		print("ok")
-		time.sleep(20)
-		print("ok")
-		time.sleep(20)
-		print("ok")
-		time.sleep(20)
-
-if ("amazon" or "AMAZON") in link_type :
-	driver.get(link_type)
-	price = driver.find_element_by_id("priceblock_ourprice")
-	price_int = float(price.text[1:])
+	driver.get("http://flasktestk.herokuapp.com/show")
+	link = driver.find_elements_by_class_name("username")[0]
+	driver.get(link.text)
+	price = driver.find_elements_by_class_name("pdp-price")[0]
+	price_int = float(price.text[4:])
+	message =str(price_int)
+	s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
+	s.quit()
+	print("ok")
+	time.sleep(20)
+	print("ok")
+	time.sleep(20)
+	print("ok")
+	time.sleep(20)
+	print("ok")
+	time.sleep(20)
+	print("ok")
+	time.sleep(20)
