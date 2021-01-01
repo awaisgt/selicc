@@ -23,7 +23,6 @@ def send_email(price,link):
 <head>
 <style>
 #customers {
-  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
