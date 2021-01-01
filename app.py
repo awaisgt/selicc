@@ -34,8 +34,8 @@ def send_email(price,link):
   </tr>
   <tr style = " padding-top: 25px; padding-bottom: 25px; background-color: #f2f2f2;" >
     <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">Alfreds Futterkiste</td>
-    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{{price}}</td>
-    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{{link}}</td>
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{price}</td>
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{link}</td>
   </tr>
   
 </table>
