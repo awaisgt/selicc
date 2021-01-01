@@ -21,19 +21,7 @@ def send_email(price,link):
 		<!DOCTYPE html>
 <html>
 <head>
-<style>
 
-#customers td, #customers th {
-  padding: 15px;
-padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-
-
-
-
-</style>
 </head>
 <body>
 
