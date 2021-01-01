@@ -4,7 +4,7 @@ import os
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
-def send_email(price,link,msg):
+def send_email(price,link,msgx):
 	from email.mime.text import MIMEText
 	from email.mime.application import MIMEApplication
 	from email.mime.multipart import MIMEMultipart
@@ -33,7 +33,7 @@ def send_email(price,link,msg):
     <th style = "  padding: 15px;padding-top: 25px;padding-bottom: 25px; text-align: left; background-color: #008891; color: white;   " >Link</th>
   </tr>
   <tr style = " padding-top: 25px; padding-bottom: 25px; background-color: #f2f2f2;" >
-    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{msg}</td>
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{msgx}</td>
     <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{price}</td>
     <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{link}</td>
   </tr>
