@@ -4,7 +4,7 @@ import os
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
-def send_email(price,link):
+def send_email(price,link,msg):
 	from email.mime.text import MIMEText
 	from email.mime.application import MIMEApplication
 	from email.mime.multipart import MIMEMultipart
@@ -33,7 +33,7 @@ def send_email(price,link):
     <th style = "  padding: 15px;padding-top: 25px;padding-bottom: 25px; text-align: left; background-color: #008891; color: white;   " >Link</th>
   </tr>
   <tr style = " padding-top: 25px; padding-bottom: 25px; background-color: #f2f2f2;" >
-    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">Alfreds Futterkiste</td>
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{msg}</td>
     <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{price}</td>
     <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{link}</td>
   </tr>
@@ -71,9 +71,11 @@ while(True):
 	temp = link.text
 	driver.get(link.text)
 	price = driver.find_elements_by_class_name("pdp-price")[0]
+	pricetext = price.text
+	name = driver.find_elements_by_class_name("pdp-mod-product-badge-title")[0]
 	#price_int = float(price.text[4:])
-	message =str(price_int)
-	send_email(price.text,temp)
+	message =name.text
+	send_email(pricetext,temp,message)
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
