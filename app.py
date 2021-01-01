@@ -73,6 +73,7 @@ while(True):
 	emailtemp = email.text
 	minutes = driver.find_elements_by_class_name("minutes")[0]
 	secondstemp = minutes.text * 60 
+	print(secondstemp)
 	driver.get(link.text)
 	price = driver.find_elements_by_class_name("pdp-price")[0]
 	pricetext = price.text
@@ -83,4 +84,4 @@ while(True):
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
-	time.sleep(secondstemp)
+	time.sleep(int(secondstemp))
