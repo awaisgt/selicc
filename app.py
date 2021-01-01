@@ -81,4 +81,4 @@ while(True):
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
-	time.sleep(300)
+	time.sleep(45)
