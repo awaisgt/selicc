@@ -66,5 +66,5 @@ while(True):
 	time.sleep(20)
 	print("ok")
 	time.sleep(20)
-	print("ok")
+	print("okk")
 	time.sleep(20)
