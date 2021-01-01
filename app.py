@@ -28,11 +28,8 @@ def send_email(price,link):
 }
 
 #customers td, #customers th {
-  border: 1px solid #ddd;
   padding: 15px;
-  
- 	padding-top: 25px;
-    
+padding-top: 25px;
   padding-bottom: 25px;
 }
 
