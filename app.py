@@ -71,9 +71,9 @@ while(True):
 	temp = link.text
 	driver.get(link.text)
 	price = driver.find_elements_by_class_name("pdp-price")[0]
-	price_int = float(price.text[4:])
+	#price_int = float(price.text[4:])
 	message =str(price_int)
-	send_email(price_int,temp)
+	send_email(price.text,temp)
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
