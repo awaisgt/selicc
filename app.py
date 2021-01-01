@@ -22,10 +22,6 @@ def send_email(price,link):
 <html>
 <head>
 <style>
-#customers {
-  border-collapse: collapse;
-  width: 100%;
-}
 
 #customers td, #customers th {
   padding: 15px;
@@ -33,26 +29,7 @@ padding-top: 25px;
   padding-bottom: 25px;
 }
 
-#customers tr:nth-child(even){
 
-
- 	padding-top: 25px;
-    
-  padding-bottom: 25px;
-background-color: #f2f2f2; 
-
-
-}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  text-align: left;
-  background-color: #008891;
-  color: white;
-}
 
 
 
@@ -60,16 +37,17 @@ background-color: #f2f2f2;
 </head>
 <body>
 
-<table id="customers">
-  <tr>
-    <th>Product</th>
-    <th>Price</th>
-    <th>Link</th>
+<table id="customers" style = " border-collapse: collapse;
+  width: 100%;">
+  <tr style = " padding-top: 25px; padding-bottom: 25px; background-color: #f2f2f2;" >
+    <th style = "  padding: 15px;padding-top: 25px;padding-bottom: 25px; text-align: left; background-color: #008891; color: white;   ">Product</th>
+    <th style = "  padding: 15px;padding-top: 25px;padding-bottom: 25px; text-align: left; background-color: #008891; color: white;   " >Price</th>
+    <th style = "  padding: 15px;padding-top: 25px;padding-bottom: 25px; text-align: left; background-color: #008891; color: white;   " >Link</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>{{price}}</td>
-    <td>{{link}}</td>
+  <tr style = " padding-top: 25px; padding-bottom: 25px; background-color: #f2f2f2;" >
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">Alfreds Futterkiste</td>
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{{price}}</td>
+    <td style = "padding: 15px; padding-top: 25px; padding-bottom: 25px; ">{{link}}</td>
   </tr>
   
 </table>
