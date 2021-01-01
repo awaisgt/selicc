@@ -4,7 +4,7 @@ import os
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
-def send_email(price):
+def send_email(price,link):
 	from email.mime.text import MIMEText
 	from email.mime.application import MIMEApplication
 	from email.mime.multipart import MIMEMultipart
@@ -18,13 +18,69 @@ def send_email(price):
 	msg['From'] = "anything"
 
 	html = f"""\
-		<html>
- 		 <head></head>
-  			<body style = "background-color:blue">
-    				<p style = "color:red" align="center">{price}</p>
-  					</body>
-							</html>
-								"""
+		<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 15px;
+  
+ 	padding-top: 25px;
+    
+  padding-bottom: 25px;
+}
+
+#customers tr:nth-child(even){
+
+
+ 	padding-top: 25px;
+    
+  padding-bottom: 25px;
+background-color: #f2f2f2; 
+
+
+}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: left;
+  background-color: #008891;
+  color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>{{price}}</td>
+    <td>{{link}}</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
+		"""
 
 	part1 = MIMEText(html, 'html')
 	msg.attach(part1)
@@ -55,7 +111,7 @@ while(True):
 	price = driver.find_elements_by_class_name("pdp-price")[0]
 	price_int = float(price.text[4:])
 	message =str(price_int)
-	send_email(price_int)
+	send_email(price_int,link.text)
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
