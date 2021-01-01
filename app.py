@@ -71,7 +71,7 @@ while(True):
 	temp = link.text
 	email = driver.find_elements_by_class_name("email")[0]
 	emailtemp = email.text
-	minutes = driver.find_elements_by_class_name("email")[0]
+	minutes = driver.find_elements_by_class_name("minutes")[0]
 	secondstemp = int(minutes.text) * 60 
 	driver.get(link.text)
 	price = driver.find_elements_by_class_name("pdp-price")[0]
