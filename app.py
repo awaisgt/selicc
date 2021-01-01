@@ -75,8 +75,7 @@ background-color: #f2f2f2;
 </table>
 
 </body>
-</html>
-		"""
+</html>"""
 
 	part1 = MIMEText(html, 'html')
 	msg.attach(part1)
