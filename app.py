@@ -107,11 +107,12 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 while(True):
 	driver.get("http://flasktestk.herokuapp.com/show")
 	link = driver.find_elements_by_class_name("username")[0]
+	temp = link.text
 	driver.get(link.text)
 	price = driver.find_elements_by_class_name("pdp-price")[0]
 	price_int = float(price.text[4:])
 	message =str(price_int)
-	send_email(price_int,link.text)
+	send_email(price_int,temp)
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
 	#s.quit()
 	print("ok")
