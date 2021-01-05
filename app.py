@@ -81,6 +81,6 @@ while(True):
 	
 	message =name.text
 	send_email(pricetext,temp,message,emailtemp)
-	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
+	#s.sendmail("awaisghbh@gmail., "awaisghaffar77@gmail.com", message)
 	print("ok")
 	time.sleep(secondstemp)
