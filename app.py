@@ -78,7 +78,7 @@ while(True):
 	price = driver.find_elements_by_class_name("pdp-price")[0]
 	pricetext = price.text
 	name = driver.find_elements_by_class_name("pdp-mod-product-badge-title")[0]
-	#price_int = float(price.text[4:])
+	
 	message =name.text
 	send_email(pricetext,temp,message,emailtemp)
 	#s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
