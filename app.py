@@ -56,7 +56,6 @@ def send_email(price,link,msgx,emailto):
 	
 	
 
-#s = smtplib.SMTP('smtp.gmail.com', 587)
 
 #s.login("awaisghbh@gmail.com", os.environ.get("PASSWORD_HIDDEN"))
 chrome_options = webdriver.ChromeOptions()
